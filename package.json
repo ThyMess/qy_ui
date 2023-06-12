@@ -2,17 +2,28 @@
   "name": "qy_ui",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/qy_ui.common.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:theme": "gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
+    "lib": "vue-cli-service build --target lib --name qy_ui --dest lib src/index.js && npm run build:theme"
   },
   "dependencies": {
+    "element-ui": "2.15.0",
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "cp-cli": "^1.0.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0",
+    "postcss": "^8.4.24",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"

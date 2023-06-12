@@ -1,0 +1,123 @@
+@import "mixins/mixins.scss";
+@import "common/var";
+
+@include b(tree-select) {
+  @at-root .special-popper {
+    height: 370px !important;
+    min-width: auto !important;
+    &>.el-scrollbar {
+      height: 100% !important;
+      &>.el-scrollbar__wrap {
+        height: 100% !important;
+        margin: 0 !important;
+        max-height: none;
+        overflow: hidden;
+        .el-scrollbar__view {
+          height: 100% !important;
+          max-height: none;
+        }
+      }
+      &>.is-vertical, .is-horizontal {
+        display: none;
+      }
+    }
+    
+    .tree {
+      width: 570px;
+      height: 300px;
+      .el-scrollbar__wrap {
+        overflow-x: hidden;
+      }
+      .top {
+        border: 1px solid rgba(211, 211, 211, 0.421);
+        border-radius: 4px;
+        margin: 10px;
+        display: flex;
+        .left {
+          width: 60%;
+          padding: 10px;
+          .left-search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+            padding-left: 10px;
+            .search-inputs {
+              width: 140px;
+              height: 32px;
+              line-height: 32px;
+              input {
+                height: 32px;
+                line-height: 32px;
+              }
+              ::v-deep .el-input__suffix {
+                .el-icon-circle-check {
+                  display: none;
+                }
+              }
+            }
+          }
+          .center {
+            margin-top: 20px;
+            padding-left: 10px;
+            font-weight: bold;
+          }
+          .createCatalogItem {
+            margin-top: 10px;
+          }
+          .left-scroll {
+            .el-tree > .el-tree-node {
+              .el-checkbox {
+                &.is-disabled {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          width: 50%;
+          border-left: 1px solid rgba(211, 211, 211, 0.421);
+          padding: 10px;
+          .right-top {
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .checkButton {
+              border: 1px solid #2e73d2;
+              color: #2e73d2;
+            }
+          }
+          .content {
+            margin-top: 20px;
+            .info {
+              display: flex;
+              align-items: center;
+              background-color: rgba(211, 211, 211, 0.421);
+              border-radius: 4px;
+              font-size: 14px;
+              padding: 8px 15px;
+              margin-top: 10px;
+              .icon {
+                margin-right: 10px;
+                width: 36px;
+                height: 36px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .footer {
+        text-align: center;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
