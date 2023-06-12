@@ -1,8 +1,17 @@
 {
   "name": "qy_ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "lib/qy_ui.common.js",
+  "files": [
+    "lib",
+    "src",
+    "examples"
+  ],
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/ThyMess/qy_ui.git"
+  },
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
