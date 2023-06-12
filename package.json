@@ -1,5 +1,5 @@
 {
-  "name": "qy_ui@cd",
+  "name": "cdqy_ui",
   "version": "0.1.0",
   "private": false,
   "main": "lib/qy_ui.common.js",
